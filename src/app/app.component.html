@@ -1,0 +1,29 @@
+<h1>Angular Router App</h1>
+<div style="text-align:center">
+  <h1>
+    Welcome to NASAAAS
+  </h1>
+  <button (click)="getData()">Fetch Data</button>
+ </div>
+ <div class="gallery" *ngFor="let image of datas">
+  <a target="_self" [href]="image.href">
+  <img [src]="image" width="300" height="200">
+  </a>
+  <div class="desc">{{image}}</div>
+ </div>
+  
+ 
+<!-- 
+ This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) 
+<nav>
+  <ul>
+    <li><a routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
+    <li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+  </ul>
+</nav>
+ The routed views render in the <router-outlet>--><!-- 
+  <img src='https://apod.nasa.gov/apod/image/2305/NGC5128_Lorenzi_960.jpg'>
+  <h2>{{newdata.copyright}}</h2>
+  <h2>{{newdata.date}}</h2>
+  <img src='{newdata.url}'>-->
+<router-outlet></router-outlet>
